@@ -1,12 +1,10 @@
-#translate method 2
-
 import easyocr
 import cv2
 from googletrans import Translator
 from PIL import Image
 import numpy as np
 
-image_path = 'images/i1.png' 
+image_path = 'images/i2.jpg' 
 image = cv2.imread(image_path)
 
 # Preprocess the image
@@ -22,6 +20,4 @@ result = reader.readtext(binary_image)
 translator = Translator()
 
 for (bbox, text, prob) in result:
-    print("Detected text:", text)  
-    translated_text = translator.translate(text, src='ja', dest='en').text
-    print("Translated text:", translated_text)
+    print(text)  
