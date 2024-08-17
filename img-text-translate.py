@@ -6,7 +6,7 @@ from googletrans import Translator
 from PIL import Image
 import numpy as np
 
-image_path = 'images/i1.png' 
+image_path = 'images/i2.jpg' 
 image = cv2.imread(image_path)
 
 # Preprocess the image

@@ -16,8 +16,5 @@ _, binary_image = cv2.threshold(denoised_image, 0, 255, cv2.THRESH_BINARY + cv2.
 reader = easyocr.Reader(['ja'])
 result = reader.readtext(binary_image)  
 
-# initialize google translator
-translator = Translator()
-
 for (bbox, text, prob) in result:
     print(text)  
